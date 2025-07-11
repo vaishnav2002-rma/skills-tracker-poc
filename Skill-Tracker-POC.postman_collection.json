@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "da788566-672f-403e-9cd3-b2f3ce5e80fd",
+		"name": "Skill-Tracker-POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46177119",
+		"_collection_link": "https://vaishnavmsudhish.postman.co/workspace/Vaishnav-M-Sudhish's-Workspace~bc2ea9fb-1793-4324-8cfa-7b46d31a4a6a/collection/46177119-da788566-672f-403e-9cd3-b2f3ce5e80fd?action=share&source=collection_link&creator=46177119"
+	},
+	"item": [
+		{
+			"name": "Add skills",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get all skills",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get one skill",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update skill info",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a skill",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Progress % of skill",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Progress history of a skill",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add goal",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

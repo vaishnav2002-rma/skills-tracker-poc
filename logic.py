@@ -23,3 +23,17 @@ def update_skill(skill_id: str, update_data: dict):
 
     skills[skill_id] = updated_skill
     return updated_skill
+
+def delete_skill(skill_id: str):
+    if skill_id in skills:
+        skills.pop(skill_id)
+        progress_logs.pop(skill_id)
+        goals.pop(skill_id)
+        return True
+    return False
+
+def log_progress(skill_id: str, entry: ProgressEntry):
+    if skill_id not in progress_logs:
+        return False
+    progress_logs[skill_id].append(entry)
+    return True

@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from schemas import Skill, SkillUpdate, ProgressEntry, Goal
 from logic import (
-    add_skill, get_all_skills, get_skill, update_skill
+    add_skill, get_all_skills, get_skill, update_skill, delete_skill, log_progress
 )
 
 app = FastAPI()
@@ -29,3 +29,15 @@ async def modify_skill(skill_id: str, update: SkillUpdate):
     if not updated:
         raise HTTPException(status_code=404, detail="Skill not found")
     return updated
+
+@app.delete("/skills/{skill_id}")
+async def remove_skill(skill_id: str):
+    if not delete_skill(skill_id):
+        raise HTTPException(status_code=404, detail="Skill not found")
+    return {"message": "Skill deleted"}
+
+@app.post("/skills/{skill_id}/progress")
+async def add_progress(skill_id: str, progress: ProgressEntry):
+    if not log_progress(skill_id, progress):
+        raise HTTPException(status_code=404, detail="Skill not found")
+    return {"message": "Progress logged"}

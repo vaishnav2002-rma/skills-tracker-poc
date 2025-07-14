@@ -37,3 +37,12 @@ def log_progress(skill_id: str, entry: ProgressEntry):
         return False
     progress_logs[skill_id].append(entry)
     return True
+
+def get_progress(skill_id: str):
+    return progress_logs.get(skill_id, None)
+
+def add_goal(skill_id: str, goal: Goal):
+    if skill_id not in goals:
+        return False
+    goals[skill_id].append(goal.goal_text)
+    return True
